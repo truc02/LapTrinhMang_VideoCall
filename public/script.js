@@ -8,33 +8,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const roomInput = document.getElementById('roomInput');
 
     createRoomButton.addEventListener('click', async () => {
-        if (await checkCameraAccess()) {
-            createRoom();
-        }
+        checkCameraAccess();
+        createRoom();
     });
 
     joinRoomButton.addEventListener('click', async () => {
-        if (await checkCameraAccess()) {
-            joinRoom();
-        }
+        checkCameraAccess();
+       joinRoom();
     });
 });
 
 // Kiểm tra quyền truy cập camera
 async function checkCameraAccess() {
-    try {
-        // Đặt video và audio thành true để yêu cầu truy cập camera và microphone
-        localStream = await navigator.mediaDevices.getUserMedia({
-            video: true,
-            audio: false
-        });
-        document.getElementById('localVideo').srcObject = localStream;
-        return true;
-    } catch (error) {
-        console.error('Error accessing media devices:', error);
-        alert('Không thể truy cập camera hoặc microphone. Vui lòng kiểm tra cài đặt quyền.');
-        return false;
-    }
+    // Đặt video và audio thành true để yêu cầu truy cập camera và microphone
+    localStream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: false
+    });
+    document.getElementById('localVideo').srcObject = localStream;
+    return true;
 }
 
 
