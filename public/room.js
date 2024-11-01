@@ -17,3 +17,13 @@ document.addEventListener('DOMContentLoaded', () => {
        joinRoom();
     });
 });
+
+async function checkCameraAccess() {
+    // Đặt video và audio thành true để yêu cầu truy cập camera và microphone
+    localStream = await navigator.mediaDevices.getUserMedia({
+        video: true,
+        audio: false
+    });
+    document.getElementById('localVideo').srcObject = localStream;
+    return true;
+}

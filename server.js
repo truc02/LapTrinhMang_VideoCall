@@ -8,6 +8,8 @@ app.use(express.static('public'));
 // Lưu trữ thông tin về các phòng
 const rooms = new Map();
 
+
+//ket noi s server
 io.on('connection', socket => {
     // Khi người dùng tạo phòng mới
     socket.on('create-room', (roomId) => {
