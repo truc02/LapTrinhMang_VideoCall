@@ -30,11 +30,11 @@ const CallList = ({ type }: { type: 'ended' | 'upcoming' | 'recordings' }) => {
   const getNoCallsMessage = () => {
     switch (type) {
       case 'ended':
-        return 'No Previous Calls';
+        return 'Không có cuộc gọi trước';
       case 'upcoming':
-        return 'No Upcoming Calls';
+        return 'Không có cuộc gọi sắp tới';
       case 'recordings':
-        return 'No Recordings';
+        return 'Không có bản ghi';
       default:
         return '';
     }
