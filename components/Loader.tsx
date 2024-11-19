@@ -1,5 +1,5 @@
 import Image from 'next/image';
-
+// Ảnh
 const Loader = () => {
   return (
     <div className="flex-center h-screen w-full">

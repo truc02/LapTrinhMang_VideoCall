@@ -3,7 +3,7 @@
 import Image from 'next/image';
 
 import { cn } from '@/lib/utils';
-
+// Trang chủ
 interface HomeCardProps {
   className?: string;
   img: string;
