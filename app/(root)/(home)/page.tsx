@@ -1,5 +1,5 @@
 import MeetingTypeList from '@/components/MeetingTypeList';
-
+// Trang chủ
 const Home = () => {
   const now = new Date();
 
